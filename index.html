@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJECT 22 | Birthday Surprise</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- INTRO: FAKE SECURITY WARNING -->
+    <section id="warningScreen" class="screen active">
+
+        <video class="hacker-video" autoplay muted loop playsinline>
+            <source src="numbers.mp4" type="video/mp4">
+        </video>
+
+        <div class="matrix-fallback" id="matrix"></div>
+
+        <div class="warning-box">
+
+            <div class="warning-icon">⚠️</div>
+
+            <h1>WARNING</h1>
+
+            <p class="warning-subtitle">
+                This site may contain malware or viruses.
+            </p>
+
+            <p class="warning-description">
+                Your system security may be at risk.
+                Proceed only if you know what you're doing.
+            </p>
+
+            <div class="warning-buttons">
+                <button id="cancelBtn" class="cancel-btn">
+                    CANCEL
+                </button>
+
+                <button id="continueBtn" class="continue-btn">
+                    CONTINUE
+                </button>
+            </div>
+
+            <p class="system-text">
+                SYSTEM STATUS: UNKNOWN
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- FLIGHT ANIMATION -->
+    <section id="flightScreen" class="screen">
+
+        <div class="flight-background"></div>
+
+        <div class="flight-title">
+            <p>CLASSIFIED FILE</p>
+            <h2>SUBJECT: BIRTHDAY GIRL</h2>
+        </div>
+
+        <!-- Dashed flight trail -->
+        <svg class="flight-trail" viewBox="0 0 1000 650"
+             preserveAspectRatio="none">
+
+            <path id="trailPath"
+                d="M 80,500
+                   Q 200,380 300,420
+                   Q 400,470 470,300
+                   Q 550,130 650,250
+                   Q 750,380 850,180"
+                fill="none"
+                stroke="#f5b5d0"
+                stroke-width="3"
+                stroke-dasharray="8 12"
+                stroke-linecap="round"/>
+        </svg>
+
+        <!-- Birthday messages -->
+        <div class="trail-text text-one">This Girl</div>
+        <div class="trail-text text-two">is now 22</div>
+        <div class="trail-text text-three"> years old</div>
+        <div class="trail-text text-four">happy!</div>
+        <div class="trail-text text-five">22nd Birthday!HAHA OLD NOW</div>
+
+        <!-- Paper airplane -->
+        <div id="paperPlane" class="paper-plane">
+
+            <svg viewBox="0 0 160 120" class="plane-svg">
+                <polygon points="8,48 150,5 91,112 72,67"
+                    fill="#ffffff" stroke="#d68eae"
+                    stroke-width="2"/>
+
+                <polygon points="8,48 72,67 150,5"
+                    fill="#f8dce9"/>
+
+                <polygon points="72,67 91,112 105,52"
+                    fill="#eab1cc"/>
+
+                <polygon points="8,48 72,67 48,77"
+                    fill="#ffffff"/>
+
+                <polyline points="72,67 150,5"
+                    stroke="#d68eae" stroke-width="2"
+                    fill="none"/>
+            </svg>
+
+        </div>
+
+    </section>
+
+
+    <!-- FINAL BIRTHDAY REVEAL -->
+    <section id="finalScreen" class="screen">
+
+        <div class="pink-background"></div>
+
+        <div class="balloon-container" id="balloons"></div>
+
+        <div class="sparkles" id="sparkles"></div>
+
+        <!-- Floating photos -->
+        <div class="photo-container" id="photoContainer">
+
+            <img src="10 (2).jpg" class="floating-photo photo-1" alt="Birthday memory 1">
+
+            <img src="4 (2).jpg" class="floating-photo photo-2" alt="Birthday memory 2">
+
+            <img src="8.jpg" class="floating-photo photo-3" alt="Birthday memory 3">
+
+            <img src="3 (2).jpg" class="floating-photo photo-4" alt="Birthday memory 4">
+
+            <img src="2.jpg" class="floating-photo photo-5" alt="Birthday memory 5">
+
+        </div>
+
+        <!-- Unfolding paper -->
+        <div class="letter-wrapper" id="letterWrapper">
+
+            <div class="letter-shadow"></div>
+
+            <div class="letter">
+
+                <div class="fold fold-top"></div>
+                <div class="fold fold-left"></div>
+                <div class="fold fold-right"></div>
+
+                <div class="letter-content">
+
+                    <p class="letter-greeting">Hey birthday girl,</p>
+
+                    <p class="letter-message">
+                        happy 22nd birthday, i hope you will
+                        graduate, and achieve your dreams in life
+                    </p>
+
+                    <p class="letter-signature">
+                        -yours truly <span id="secretWords">sissy bitch</span>
+                    </p>
+
+                    <div class="letter-decoration">♡</div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="final-caption" id="finalCaption">
+            <p>AN IMPORTANT MESSAGE HAS BEEN DELIVERED.</p>
+            <h2>HAPPY 22ND BIRTHDAY!</h2>
+            <span>FROM THE MOST ANNOYING SISTER, PENGS. ♡</span>
+        </div>
+
+    </section>
+
+
+    <audio id="birthdayMusic" loop>
+        <source src="hbd.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
